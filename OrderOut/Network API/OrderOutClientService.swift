@@ -9,13 +9,23 @@
 import Foundation
 
 enum OrderOutClientService {
-    case get(parameter:Any)
+    case food(name:String, location:(lat:Double, lon:Double))
 }
 
 extension OrderOutClientService: HTTPClientTask {
     
     var path: String {
-        ""
+        switch self {
+            case .food:
+                return "/maps/api/place/nearbysearch/json"
+        }
+    }
+    
+    var parameters: [String : Any] {
+        switch self {
+        case .food(let name, let (lat, lon)):
+            return [ "location": "\(lat),\(lon)", "type" : "restaurant", "radius" : AppConstants.searchRadius, "keyword" : name, "key" : AppConstants.apiKey ]
+        }
     }
     
     var method: HTTPRequestMethod {

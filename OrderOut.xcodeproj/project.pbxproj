@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		9A8DA136BB37BBE34859EF1C /* libPods-OrderOutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1186DF5E06E2CACD6E7581 /* libPods-OrderOutTests.a */; };
 		B4B17B1453CFBD9BCF1847BE /* libPods-OrderOut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EDF434211D4403430AA81C /* libPods-OrderOut.a */; };
+		F310BC2424FEAE7000323058 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2324FEAE7000323058 /* Business.swift */; };
+		F310BC2624FEAEDF00323058 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2524FEAEDF00323058 /* BaseResponse.swift */; };
+		F310BC2924FEB02D00323058 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2824FEB02D00323058 /* LocationService.swift */; };
+		F310BC2B24FEB47100323058 /* OrderOutLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2A24FEB47100323058 /* OrderOutLocationService.swift */; };
 		F345590024FA94E900C28DE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34558FF24FA94E900C28DE3 /* AppDelegate.swift */; };
 		F345590224FA94E900C28DE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345590124FA94E900C28DE3 /* SceneDelegate.swift */; };
-		F345590424FA94E900C28DE3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345590324FA94E900C28DE3 /* MapViewController.swift */; };
+		F345590424FA94E900C28DE3 /* OrderOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345590324FA94E900C28DE3 /* OrderOutViewController.swift */; };
 		F345590724FA94E900C28DE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F345590524FA94E900C28DE3 /* Main.storyboard */; };
 		F345590924FA94EE00C28DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F345590824FA94EE00C28DE3 /* Assets.xcassets */; };
 		F345590C24FA94EE00C28DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F345590A24FA94EE00C28DE3 /* LaunchScreen.storyboard */; };
@@ -21,7 +25,7 @@
 		F345592A24FC026300C28DE3 /* Decodable+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345592724FC026300C28DE3 /* Decodable+Any.swift */; };
 		F345592B24FC026300C28DE3 /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345592824FC026300C28DE3 /* Date+Additions.swift */; };
 		F345592C24FC026300C28DE3 /* UIView+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345592924FC026300C28DE3 /* UIView+DropShadow.swift */; };
-		F345592F24FC028000C28DE3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345592E24FC028000C28DE3 /* MapViewModel.swift */; };
+		F345592F24FC028000C28DE3 /* OrderOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345592E24FC028000C28DE3 /* OrderOutViewModel.swift */; };
 		F345593C24FC029000C28DE3 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345593524FC029000C28DE3 /* AppConstants.swift */; };
 		F345593D24FC029000C28DE3 /* LocationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345593624FC029000C28DE3 /* LocationStatus.swift */; };
 		F345594624FC272C00C28DE3 /* HTTPClientTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345594524FC272C00C28DE3 /* HTTPClientTask.swift */; };
@@ -47,10 +51,14 @@
 		6F1186DF5E06E2CACD6E7581 /* libPods-OrderOutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrderOutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B736559779C7B8CF01465C /* Pods-OrderOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderOut.release.xcconfig"; path = "Target Support Files/Pods-OrderOut/Pods-OrderOut.release.xcconfig"; sourceTree = "<group>"; };
 		D8EDF434211D4403430AA81C /* libPods-OrderOut.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrderOut.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F310BC2324FEAE7000323058 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		F310BC2524FEAEDF00323058 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		F310BC2824FEB02D00323058 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		F310BC2A24FEB47100323058 /* OrderOutLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOutLocationService.swift; sourceTree = "<group>"; };
 		F34558FC24FA94E900C28DE3 /* OrderOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34558FF24FA94E900C28DE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F345590124FA94E900C28DE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F345590324FA94E900C28DE3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F345590324FA94E900C28DE3 /* OrderOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOutViewController.swift; sourceTree = "<group>"; };
 		F345590624FA94E900C28DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F345590824FA94EE00C28DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F345590B24FA94EE00C28DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +71,7 @@
 		F345592724FC026300C28DE3 /* Decodable+Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Any.swift"; sourceTree = "<group>"; };
 		F345592824FC026300C28DE3 /* Date+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
 		F345592924FC026300C28DE3 /* UIView+DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadow.swift"; sourceTree = "<group>"; };
-		F345592E24FC028000C28DE3 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F345592E24FC028000C28DE3 /* OrderOutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderOutViewModel.swift; sourceTree = "<group>"; };
 		F345593524FC029000C28DE3 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F345593624FC029000C28DE3 /* LocationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationStatus.swift; sourceTree = "<group>"; };
 		F345594524FC272C00C28DE3 /* HTTPClientTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTask.swift; sourceTree = "<group>"; };
@@ -112,6 +120,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F310BC2724FEB00C00323058 /* Location Services */ = {
+			isa = PBXGroup;
+			children = (
+				F310BC2824FEB02D00323058 /* LocationService.swift */,
+				F345593624FC029000C28DE3 /* LocationStatus.swift */,
+				F310BC2A24FEB47100323058 /* OrderOutLocationService.swift */,
+			);
+			path = "Location Services";
+			sourceTree = "<group>";
+		};
 		F34558F324FA94E900C28DE3 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +153,7 @@
 		F34558FE24FA94E900C28DE3 /* OrderOut */ = {
 			isa = PBXGroup;
 			children = (
+				F310BC2724FEB00C00323058 /* Location Services */,
 				F345594424FC232800C28DE3 /* Network API */,
 				F345594024FC0B6200C28DE3 /* Views */,
 				F345593F24FC02B900C28DE3 /* Supporting Files */,
@@ -177,7 +196,7 @@
 		F345592D24FC028000C28DE3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F345592E24FC028000C28DE3 /* MapViewModel.swift */,
+				F345592E24FC028000C28DE3 /* OrderOutViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -186,7 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				F345593524FC029000C28DE3 /* AppConstants.swift */,
-				F345593624FC029000C28DE3 /* LocationStatus.swift */,
+				F310BC2324FEAE7000323058 /* Business.swift */,
+				F310BC2524FEAEDF00323058 /* BaseResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,7 +234,7 @@
 		F345594124FC0B6A00C28DE3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F345590324FA94E900C28DE3 /* MapViewController.swift */,
+				F345590324FA94E900C28DE3 /* OrderOutViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -398,12 +418,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F345592A24FC026300C28DE3 /* Decodable+Any.swift in Sources */,
-				F345592F24FC028000C28DE3 /* MapViewModel.swift in Sources */,
+				F345592F24FC028000C28DE3 /* OrderOutViewModel.swift in Sources */,
 				F345594A24FC394100C28DE3 /* URLRequestClientService.swift in Sources */,
 				F345592C24FC026300C28DE3 /* UIView+DropShadow.swift in Sources */,
-				F345590424FA94E900C28DE3 /* MapViewController.swift in Sources */,
+				F345590424FA94E900C28DE3 /* OrderOutViewController.swift in Sources */,
+				F310BC2424FEAE7000323058 /* Business.swift in Sources */,
 				F345590024FA94E900C28DE3 /* AppDelegate.swift in Sources */,
 				F345593D24FC029000C28DE3 /* LocationStatus.swift in Sources */,
+				F310BC2624FEAEDF00323058 /* BaseResponse.swift in Sources */,
 				F345594624FC272C00C28DE3 /* HTTPClientTask.swift in Sources */,
 				F345592524FC022D00C28DE3 /* AppContainer.swift in Sources */,
 				F345590224FA94E900C28DE3 /* SceneDelegate.swift in Sources */,
@@ -411,6 +433,8 @@
 				F345594C24FC4B1600C28DE3 /* OrderOutClientService.swift in Sources */,
 				F345592B24FC026300C28DE3 /* Date+Additions.swift in Sources */,
 				F345593C24FC029000C28DE3 /* AppConstants.swift in Sources */,
+				F310BC2B24FEB47100323058 /* OrderOutLocationService.swift in Sources */,
+				F310BC2924FEB02D00323058 /* LocationService.swift in Sources */,
 				F345592424FC022D00C28DE3 /* Swinject+Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

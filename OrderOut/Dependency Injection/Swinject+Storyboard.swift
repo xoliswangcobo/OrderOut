@@ -15,8 +15,8 @@ extension SwinjectStoryboard {
         
         let appContainer = AppContainer.shared.container
         
-        defaultContainer.storyboardInitCompleted(MapViewController.self) { _, controller in
-            controller.viewModel = appContainer.resolve(MapViewModel.self)
+        defaultContainer.storyboardInitCompleted(OrderOutViewController.self) { _, controller in
+            controller.viewModel = appContainer.resolve(OrderOutViewModel.self)
         }
     }
 }

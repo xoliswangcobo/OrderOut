@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  OrderOutViewController.swift
 //  OrderOut
 //
 //  Created by Xoliswa on 2020/08/29.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class OrderOutViewController: UIViewController {
 
-    var viewModel: MapViewModel!
+    var viewModel: OrderOutViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

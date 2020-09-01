@@ -22,12 +22,20 @@ class AppContainer {
     
     private func setupDefaultContainers() {
         
+        container.register(LocationService.self) { _ in
+            let service = OrderOutLocationService()
+            service.requestAuthorisation()
+            service.startLocationService()
+            
+            return service
+        }
+        
         container.register(HTTPClientService.self) { _ in
             return URLRequestClientService.init(host: AppConstants.baseURL)
         }
         
-        container.register(MapViewModel.self) { resolver in
-            return MapViewModel.init(service: resolver.resolve(HTTPClientService.self)!, locationManager: CLLocationManager.init())
+        container.register(OrderOutViewModel.self) { resolver in
+            return OrderOutViewModel.init(service: resolver.resolve(HTTPClientService.self)!, locationService: resolver.resolve(LocationService.self)!)
         }
     }
 }
