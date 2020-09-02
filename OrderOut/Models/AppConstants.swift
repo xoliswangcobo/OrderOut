@@ -18,6 +18,12 @@ enum AppConstants {
     
     static let extremeLongitude = 180.005
     
-    static let searchRadius = 20000
+    static let searchRadius = "20000"
+    
+    static let photoMaxWidth = "400"
+    
+    static let mapRegionBoundaryDistance = 50000
+    
+    static let cameraMaxCenterCoordinateDistance = 120000
     
 }

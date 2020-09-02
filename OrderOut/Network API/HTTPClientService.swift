@@ -12,6 +12,7 @@ protocol HTTPClientService {
     
     var host: URL { get set }
     
+    func execute(client: HTTPClientTask, responseHandler: @escaping (Error?, Data?) -> Void)
     func execute(client: HTTPClientTask, responseHandler: @escaping (Error?, Any?) -> Void)
     func execute<Model : Decodable>(client: HTTPClientTask, responseHandler: @escaping (Error?, Model?) -> Void)
 }

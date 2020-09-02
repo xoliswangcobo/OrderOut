@@ -11,10 +11,18 @@ import Foundation
 protocol LocationService {
     var userLocation:(lat: Double, lon: Double)? { get }
     var authorisationStatus:LocationStatus { get }
+    var delegate: LocationServiceDelegate? { get set  }
 }
 
 protocol LocationServiceDelegate {
     func locationDidUpdate(_ service: LocationService, _ location:(lat: Double, lon: Double))
     func authorisationStatusChanged(_ service: LocationService,_ locationStatus:LocationStatus)
     func locationErrorOccured(_ service: LocationService,_ error: Error)
+}
+
+extension LocationService {
+    
+    var delegate: LocationServiceDelegate? {
+        nil
+    }
 }

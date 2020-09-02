@@ -10,6 +10,7 @@ import Foundation
 
 enum OrderOutClientService {
     case food(name:String, location:(lat:Double, lon:Double))
+    case photo(reference:String)
 }
 
 extension OrderOutClientService: HTTPClientTask {
@@ -18,6 +19,8 @@ extension OrderOutClientService: HTTPClientTask {
         switch self {
             case .food:
                 return "/maps/api/place/nearbysearch/json"
+            case .photo:
+                return "/maps/api/place/photo"
         }
     }
     
@@ -25,6 +28,8 @@ extension OrderOutClientService: HTTPClientTask {
         switch self {
         case .food(let name, let (lat, lon)):
             return [ "location": "\(lat),\(lon)", "type" : "restaurant", "radius" : AppConstants.searchRadius, "keyword" : name, "key" : AppConstants.apiKey ]
+        case .photo(let reference):
+            return [ "key" : AppConstants.apiKey, "photoreference" : reference, "maxwidth" : "400" ]
         }
     }
     

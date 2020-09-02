@@ -13,6 +13,11 @@
 		F310BC2624FEAEDF00323058 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2524FEAEDF00323058 /* BaseResponse.swift */; };
 		F310BC2924FEB02D00323058 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2824FEB02D00323058 /* LocationService.swift */; };
 		F310BC2B24FEB47100323058 /* OrderOutLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2A24FEB47100323058 /* OrderOutLocationService.swift */; };
+		F310BC2F24FEF12B00323058 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC2E24FEF12A00323058 /* UIColor+App.swift */; };
+		F310BC3124FF027C00323058 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC3024FF027C00323058 /* MapViewController.swift */; };
+		F310BC3324FF058B00323058 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC3224FF058B00323058 /* MessageView.swift */; };
+		F310BC3724FF157D00323058 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC3624FF157D00323058 /* BusinessTableViewCell.swift */; };
+		F310BC3924FF1E9D00323058 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310BC3824FF1E9D00323058 /* UIImageView+Download.swift */; };
 		F345590024FA94E900C28DE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34558FF24FA94E900C28DE3 /* AppDelegate.swift */; };
 		F345590224FA94E900C28DE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345590124FA94E900C28DE3 /* SceneDelegate.swift */; };
 		F345590424FA94E900C28DE3 /* OrderOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345590324FA94E900C28DE3 /* OrderOutViewController.swift */; };
@@ -55,6 +60,11 @@
 		F310BC2524FEAEDF00323058 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		F310BC2824FEB02D00323058 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		F310BC2A24FEB47100323058 /* OrderOutLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOutLocationService.swift; sourceTree = "<group>"; };
+		F310BC2E24FEF12A00323058 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		F310BC3024FF027C00323058 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F310BC3224FF058B00323058 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		F310BC3624FF157D00323058 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
+		F310BC3824FF1E9D00323058 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		F34558FC24FA94E900C28DE3 /* OrderOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34558FF24FA94E900C28DE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F345590124FA94E900C28DE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +140,22 @@
 			path = "Location Services";
 			sourceTree = "<group>";
 		};
+		F310BC3424FF154800323058 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				F310BC3224FF058B00323058 /* MessageView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		F310BC3524FF156000323058 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F310BC3624FF157D00323058 /* BusinessTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F34558F324FA94E900C28DE3 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +215,8 @@
 				F345592724FC026300C28DE3 /* Decodable+Any.swift */,
 				F345592824FC026300C28DE3 /* Date+Additions.swift */,
 				F345592924FC026300C28DE3 /* UIView+DropShadow.swift */,
+				F310BC2E24FEF12A00323058 /* UIColor+App.swift */,
+				F310BC3824FF1E9D00323058 /* UIImageView+Download.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +252,8 @@
 		F345594024FC0B6200C28DE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F310BC3524FF156000323058 /* Cells */,
+				F310BC3424FF154800323058 /* Custom Views */,
 				F345594324FC0B9100C28DE3 /* Assets */,
 				F345594224FC0B7A00C28DE3 /* Storyboards */,
 				F345594124FC0B6A00C28DE3 /* View Controllers */,
@@ -235,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				F345590324FA94E900C28DE3 /* OrderOutViewController.swift */,
+				F310BC3024FF027C00323058 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -423,19 +454,24 @@
 				F345592C24FC026300C28DE3 /* UIView+DropShadow.swift in Sources */,
 				F345590424FA94E900C28DE3 /* OrderOutViewController.swift in Sources */,
 				F310BC2424FEAE7000323058 /* Business.swift in Sources */,
+				F310BC3324FF058B00323058 /* MessageView.swift in Sources */,
 				F345590024FA94E900C28DE3 /* AppDelegate.swift in Sources */,
 				F345593D24FC029000C28DE3 /* LocationStatus.swift in Sources */,
 				F310BC2624FEAEDF00323058 /* BaseResponse.swift in Sources */,
 				F345594624FC272C00C28DE3 /* HTTPClientTask.swift in Sources */,
 				F345592524FC022D00C28DE3 /* AppContainer.swift in Sources */,
+				F310BC3924FF1E9D00323058 /* UIImageView+Download.swift in Sources */,
 				F345590224FA94E900C28DE3 /* SceneDelegate.swift in Sources */,
 				F345594824FC290B00C28DE3 /* HTTPClientService.swift in Sources */,
+				F310BC3124FF027C00323058 /* MapViewController.swift in Sources */,
 				F345594C24FC4B1600C28DE3 /* OrderOutClientService.swift in Sources */,
 				F345592B24FC026300C28DE3 /* Date+Additions.swift in Sources */,
 				F345593C24FC029000C28DE3 /* AppConstants.swift in Sources */,
 				F310BC2B24FEB47100323058 /* OrderOutLocationService.swift in Sources */,
+				F310BC3724FF157D00323058 /* BusinessTableViewCell.swift in Sources */,
 				F310BC2924FEB02D00323058 /* LocationService.swift in Sources */,
 				F345592424FC022D00C28DE3 /* Swinject+Storyboard.swift in Sources */,
+				F310BC2F24FEF12B00323058 /* UIColor+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

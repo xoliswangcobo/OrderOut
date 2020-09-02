@@ -19,30 +19,43 @@ enum OrderOutMessage {
 
 class OrderOutViewModel {
     
-    private let locationService: LocationService!
+    private var locationService: LocationService!
     private let service: HTTPClientService!
     
     init(service: HTTPClientService, locationService: LocationService) {
         self.service = service
         self.locationService = locationService
+        self.locationService.delegate = self
     }
     
     // MARK: - Bond Binding
     var currentLocation = Observable<(latitude:Double, longitude:Double)>((latitude:AppConstants.extremeLatitude, longitude:AppConstants.extremeLongitude))
-    var businesses = MutableObservableArray<Business>([])
+    var businesses = Observable<[Business]>([])
     var locationAvailable = Observable<Bool>(false)
     
     var orderOutOperation = Observable<OrderOutOperation?>(.None)
     var orderOutMessage = Observable<OrderOutMessage>(.None)
     
     func findFood(name: String) {
+        self.orderOutOperation.send(.FoodSearch)
         if let userLocation = self.locationService.userLocation {
             self.service.execute(client: OrderOutClientService.food(name: name, location: (lat: userLocation.lat, lon: userLocation.lon))) { (error:Error?, response:BaseResponse<[Business]>?) in
-                if error == nil {
-                    let _ = self.businesses.replaceElements(with: response?.results)
+                self.orderOutOperation.send(.None)
+                if error == nil, (response?.results) != nil {
+                    let _ = self.businesses.send((response?.results)!)
                 } else {
-                    
+                    self.orderOutMessage.send(.Message(text: error?.localizedDescription ?? "An error occured"))
                 }
+            }
+        } else {
+            self.orderOutMessage.send(.Message(text: "User location cannot be determined."))
+        }
+    }
+    
+    func photo(reference: String, completion: @escaping ((Data) -> Void)) {
+        self.service.execute(client: OrderOutClientService.photo(reference: reference)) { (error, data:Data?) in
+            if let data = data {
+                completion(data)
             }
         }
     }

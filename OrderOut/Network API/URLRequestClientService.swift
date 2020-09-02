@@ -19,7 +19,11 @@ class URLRequestClientService : HTTPClientService {
     func execute<Model : Decodable>(client: HTTPClientTask, responseHandler: @escaping (Error?, Model?) -> Void) {
         self.execute(client: client) { (error, response) in
             if let theResponse = response {
-                responseHandler(error, try? Model.decode(theResponse))
+                do {
+                    responseHandler(error, try Model.decode(theResponse))
+                } catch (let e) {
+                    responseHandler(e, nil)
+                }
             } else {
                 responseHandler(error, nil)
             }
@@ -27,16 +31,7 @@ class URLRequestClientService : HTTPClientService {
     }
     
     func execute(client: HTTPClientTask, responseHandler: @escaping (Error?, Any?) -> Void) {
-        
-        var components = URLComponents(url: self.host, resolvingAgainstBaseURL: true)!
-        components.path = components.path + client.path
-        
-        guard let url = components.url else {
-            responseHandler(nil, nil)
-            return
-        }
-        
-        let responseProcessor = { (data: Data?, response: URLResponse?, error: Error?) in
+        self.execute(client: client) { (error:Error?, data:Data?) in
             if let theResponseData = data {
                 do {
                     let responseObject = try JSONSerialization.jsonObject(with: theResponseData, options: [])
@@ -53,6 +48,17 @@ class URLRequestClientService : HTTPClientService {
             } else {
                 responseHandler(error, nil)
             }
+        }
+    }
+    
+    func execute(client: HTTPClientTask, responseHandler: @escaping (Error?, Data?) -> Void) {
+        
+        var components = URLComponents(url: self.host, resolvingAgainstBaseURL: true)!
+        components.path = components.path + client.path
+        
+        guard let url = components.url else {
+            responseHandler(nil, nil)
+            return
         }
 
         print("APICoreRequest: \(String(format: "%@%@ -: %@", self.host.absoluteString, client.path, client.parameters.jsonString() ?? ""))")
@@ -93,7 +99,7 @@ class URLRequestClientService : HTTPClientService {
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
-                responseProcessor(data, response, error)
+                responseHandler(error, data)
             }
         }
         
