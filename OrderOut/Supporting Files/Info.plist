@@ -60,5 +60,7 @@
 	</array>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>OrderOut needs to use location services to determined the weather.</string>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 </dict>
 </plist>
